@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Square Class
-This class don't do anything for the moment
+"""A module for working with squares.
 """
 
 
 class Square:
+    """Represents a 2D Polygon with 4 equal and perpendicular sides.
+    """
     pass

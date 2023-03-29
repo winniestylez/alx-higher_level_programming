@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-"""Square Class
-A Square Class
+"""A module for working with squares.
 """
 
 
 class Square:
-
-    def __init__(self, size):
-        """__init__
-        The __init__ method initializes the size value
-        of the square.
-        Attributes:
-            size (int): The size of the square.
+    """Check for TypeError and ValueError
+    """
+    def __init__(self, size=0):
+        """Initializes a Square with a given size.
         """
-        self.__size = 
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        else:
+            if size < 0:
+                raise ValueError('size must be >= 0')
+            else:
+                self.__size = size 
