@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-def inherits_from(obj, a_class):
-    if isinstance(obj, a_class) and \
-       issubclass(a_class, obj.__class__) is False:
-        return True
+"""Contains a single function"""
 
-    return False
+
+def inherits_from(obj, a_class):
+    """
+        Check if the object is instance of a class inherited
+        from directly or indirectly
+    """
+    return ((issubclass(type(obj), a_class)) and type(obj) != a_class)
